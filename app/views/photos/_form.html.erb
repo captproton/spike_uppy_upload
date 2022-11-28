@@ -1,0 +1,34 @@
+<%= form_with(model: photo) do |form| %>
+  <% if photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :title, class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <% if photo.persisted? %>
+      <div class="float-end">
+        <%= link_to 'Destroy', photo, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+
+    <%= form.submit class: 'btn btn-primary' %>
+
+    <% if photo.persisted? %>
+      <%= link_to "Cancel", photo, class: "btn btn-link" %>
+    <% else %>
+      <%= link_to "Cancel", photos_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+<% end %>
