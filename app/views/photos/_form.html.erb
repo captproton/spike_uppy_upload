@@ -16,6 +16,23 @@
       <%= form.text_field :title, class: 'form-control' %>
     </div>
 
+  <div class="form-group mb-3" data-uppy="photo[image]">
+    <%= form.label :image %>
+    <div>
+      <% if @photo.image.attached? %>
+        <%= image_tag @photo.image, width: 280, data: { behavior: 'uppy-preview' } %>
+      <% else %>
+        <img src="/images_placeholder.png" 
+              width="280" 
+              data-behavior="uppy-preview" 
+        />
+      <% end %>
+    </div>
+
+    <%= link_to "Upload", "#", data: { behavior: "uppy-trigger" } %>
+  </div>
+
+
   <div class="mb-3">
     <% if photo.persisted? %>
       <div class="float-end">
