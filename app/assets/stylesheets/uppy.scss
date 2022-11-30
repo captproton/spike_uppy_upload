@@ -1,3 +1,14 @@
-@import "@uppy/core/dist/style";
 @import "@uppy/dashboard/dist/style";
+@import "@uppy/core/dist/style";
 
+.random-style {
+    // fake style
+}
+.uppy-StatusBar-actions {
+    background-color: orange;
+}
+
+.uppy-u-reset {
+        background-color: blue;
+
+}

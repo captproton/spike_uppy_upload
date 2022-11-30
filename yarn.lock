@@ -73,6 +73,14 @@
   resolved "https://registry.yarnpkg.com/@transloadit/prettier-bytes/-/prettier-bytes-0.0.9.tgz#8d3146f75fd9d3c544cb63ec7dbdeb6670d3e2d7"
   integrity sha512-pCvdmea/F3Tn4hAtHqNXmjcixSaroJJ+L3STXlYJdir1g1m2mRQpWbN8a4SvgQtaw2930Ckhdx8qXdXBFMKbAA==
 
+"@uppy/companion-client@^3.0.2":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@uppy/companion-client/-/companion-client-3.1.1.tgz#8c9974f70b899a40771da9a90113941356f9842e"
+  integrity sha512-S1M37vjWu8gdOgdI3Hh/1fVZ9GaLdyPQjVyUujZDTsr79b4VG7v/zjdqJ0FiOTjfGbpnj8s9kr1uyYi0Zf5VFw==
+  dependencies:
+    "@uppy/utils" "^5.1.1"
+    namespace-emitter "^2.0.1"
+
 "@uppy/core@^3.0.4":
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/@uppy/core/-/core-3.0.4.tgz#3bdc08e50ab72749e6f9afa60eec6c836e8b3442"
@@ -113,7 +121,7 @@
     "@uppy/utils" "^5.0.2"
     preact "^10.5.13"
 
-"@uppy/provider-views@^3.0.2":
+"@uppy/provider-views@^3.0.1", "@uppy/provider-views@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@uppy/provider-views/-/provider-views-3.0.2.tgz#386b3dbbce7fba21e3da776d90d9ea0737424249"
   integrity sha512-z4v6UAiNSM2h8BB+/svBU1R/6QsssoLYKd4O8g6L7iAD1S2NPtU7U0busIyTvh3CA1Q6tfvfwF1JOFGTfNPQaA==
@@ -146,7 +154,17 @@
     "@uppy/utils" "^5.0.2"
     exifr "^7.0.0"
 
-"@uppy/utils@^5.0.2", "@uppy/utils@^5.1.0":
+"@uppy/unsplash@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@uppy/unsplash/-/unsplash-3.0.1.tgz#fd68d1b8074b6c643bfac5a1377b77b5861e0d3b"
+  integrity sha512-+QR7oDx+ZLXLHlzf9zvcJPO/Hn66fBaycaO0iZkNXpjobQfmDghwm3uZy4QdqE5DU8ILTAYgQfImt6EetND9yg==
+  dependencies:
+    "@uppy/companion-client" "^3.0.2"
+    "@uppy/provider-views" "^3.0.1"
+    "@uppy/utils" "^5.0.2"
+    preact "^10.5.13"
+
+"@uppy/utils@^5.0.2", "@uppy/utils@^5.1.0", "@uppy/utils@^5.1.1":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@uppy/utils/-/utils-5.1.1.tgz#9597e8696e17d71413672bd56eb082c7410514a3"
   integrity sha512-uoI+PcIVQboky0ZbN4PQeK1seZnnJocomzeK7blId9HKJ6QNgZLf2ibk2CQuQxrOuNsWhgrhs5uLO5Si0oM0Yw==

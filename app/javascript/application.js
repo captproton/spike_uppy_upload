@@ -28,15 +28,14 @@ document.addEventListener("turbo:load", () => {
 })
 
 // start uppy code
-// const Uppy = require('@uppy/core')
 import Uppy from '@uppy/core'
-// const Dashboard = require('@uppy/dashboard')
 import Dashboard from '@uppy/dashboard'
-// const ActiveStorageUpload = require('@excid3/uppy-activestorage-upload')
 import ActiveStorageUpload from '@excid3/uppy-activestorage-upload'
+// unsplash 
+import Unsplash from '@uppy/unsplash'
 
-require('@uppy/core/dist/style.css')
-require('@uppy/dashboard/dist/style.css')
+// require('@uppy/core/dist/style.css')
+// require('@uppy/dashboard/dist/style.css')
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-uppy]').forEach(element => setupUppy(element))
@@ -67,6 +66,21 @@ function setupUppy(element) {
     trigger: trigger,
     closeAfterFinish: true,
   })
+
+  // unsplash
+  // Example of setting all the options to their defaults.
+  // Not passing anything to `Unsplash` is therefor the same as the example below.
+  .use(Unsplash, {
+    id: 'Unsplash',
+    title: 'Unsplash',
+    target: Dashboard,
+  //   // companionUrl: null,
+    companionUrl: 'https://api2.transloadit.com/companion',
+  //   companionHeaders: null,
+  //   companionAllowedHosts: null,
+  })  
+
+  
 
   uppy.on('complete', (result) => {
     // Rails.ajax
